@@ -1,0 +1,34 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>无标题文档</title>
+<style>
+*{ margin:0; padding:0;}
+.sun{ width:100px; height:100px; background:#FC6; box-shadow:0px 0px 100px #FC0; border-radius:50%; position:absolute; left:0; top:0;}
+p{ width:500px; margin:200px auto; font-size:20px; text-shadow:0 0 0 #000;}
+</style>
+<script>
+	window.onload=function(){
+		var oSun=document.querySelector('.sun');
+		var oP=document.querySelector('p');
+		document.onmousemove=function(ev){
+			oSun.style.left=ev.pageX-oSun.offsetWidth/2+'px';
+			oSun.style.top=ev.pageY-oSun.offsetHeight/2+'px';
+			
+			var disX=(oP.offsetLeft+oP.offsetWidth/2)-(oSun.offsetLeft+oSun.offsetWidth/2);
+			var disY=(oP.offsetTop+oP.offsetHeight/2)-(oSun.offsetTop+oSun.offsetHeight/2);
+			var c=Math.sqrt(Math.pow(disX,2)+Math.pow(disY,2));
+			oP.style.textShadow=disX/2+'px '+disY/2+'px '+c/60+'px #000';
+		};
+		
+	};
+</script>
+</head>
+
+<body>
+	<div class="sun"></div>
+	<p>每当月光 洒在毡房 只有那云朵 静静地欣赏 阿妈的摇篮 童年里晃古老的故事 慢慢慢慢讲草原上的月亮 阿妈的目光照亮我心中 那一份思念草原上的月亮 阿妈的祈祷有家的地方才是天堂草原上的月亮 阿妈的目光照亮我心中 那一份思念草原上的月亮 阿妈的祈祷有家的地方才是天堂</p>
+
+</body>
+</html>

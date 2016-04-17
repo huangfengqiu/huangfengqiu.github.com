@@ -1,0 +1,23 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>无标题文档</title>
+<style>
+div{ width:200px; height:200px; background:red; margin-bottom:20px;}
+</style>
+<script>
+	window.onload=function(){
+		var oDiv=document.querySelector('div');
+		for(var name in oDiv.dataset){//dataset要的是自定义的属性，以后加自定义属性用dataset加
+						//所有的自定义属性  w3c发表声明 说永远不会用以data-占用的属性。
+			document.write(name+'='+oDiv.dataset[name]+'<br />');
+		}
+	};
+</script>
+</head>
+
+<body>
+	<div class="box active" data-aaa="abc" data-bbb="bcd" data-ccc="cde"></div>
+</body>
+</html>

@@ -1,0 +1,25 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>无标题文档</title>
+<style>
+.box{ width:200px; height:200px; background:red; display:none;}
+.box.on{ display:block;}
+</style>
+<script>
+	window.onload=function(){
+		var oBox=document.querySelector('.box');
+		var oBtn=document.querySelector('#btn');
+		oBtn.onclick=function(){
+			oBox.classList.toggle('on');
+		};
+	};
+</script>
+</head>
+
+<body>
+	<input type="button" id="btn" value="控制显隐" />
+	<div class="box"></div>
+</body>
+</html>

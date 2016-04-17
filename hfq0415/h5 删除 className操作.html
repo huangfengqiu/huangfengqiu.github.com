@@ -1,0 +1,21 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>无标题文档</title>
+<style>
+.on{ width:200px; height:200px; background:red;}	
+</style>
+<script>
+	window.onload=function(){
+		var oBox=document.querySelector('.box');
+		oBox.classList.add('on');  // 增加className
+		oBox.classList.remove('active');  //删除className
+	};
+</script>
+</head>
+
+<body>
+	<div class="box active"></div>
+</body>
+</html>
